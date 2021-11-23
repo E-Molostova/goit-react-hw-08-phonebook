@@ -1,17 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import s from './Styles.module.css';
 
 export default function LoginPage() {
   const dispatch = useDispatch();
@@ -37,19 +27,33 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+    <div className={s.divForm}>
+      <form onSubmit={handleSubmit} className={s.form} autoComplete="off">
+        <label className={s.label}>
           Email
-          <input type="email" name="email" value={email} onChange={handleChange} />
+          <input
+            className={s.input}
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
         </label>
 
-        <label style={styles.label}>
+        <label className={s.label}>
           Password
-          <input type="password" name="password" value={password} onChange={handleChange} />
+          <input
+            className={s.input}
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
         </label>
 
-        <button type="submit">Log In</button>
+        <button className={s.btn} type="submit">
+          Log In
+        </button>
       </form>
     </div>
   );
