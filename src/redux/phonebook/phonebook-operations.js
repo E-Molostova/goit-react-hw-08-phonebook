@@ -11,8 +11,6 @@ import {
   deleteContactError,
 } from './phonebook-actions';
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
-
 export const fetchContacts = () => async dispatch => {
   dispatch(fetchContactsRequest());
 
@@ -27,11 +25,20 @@ export const fetchContacts = () => async dispatch => {
 
 export const addContact =
   ({ name, number }) =>
-  async dispatch => {
-    const contact = {
-      name,
-      number,
-    };
+  async (dispatch, getState) => {
+    const contact = { name, number };
+    const contacts = getState().phonebook.contacts;
+    if (
+      contacts?.some(
+        contact =>
+          contact.name.toLowerCase() === name.toLowerCase() ||
+          contacts.some(contact => contact.number === number),
+      )
+    ) {
+      return dispatch(
+        addContactError(`Name${name} or number is already exist, check it out please`),
+      );
+    }
 
     dispatch(addContactRequest());
 

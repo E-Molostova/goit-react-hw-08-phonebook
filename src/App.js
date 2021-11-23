@@ -1,6 +1,6 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import Container from './Components/Container/Container';
 import AppBar from './Components/AppBar/AppBar';
 // import HomePage from './views/HomePage';

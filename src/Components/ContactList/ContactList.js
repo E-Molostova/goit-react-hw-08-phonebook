@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/phonebook/phonebook-operations';
+import { deleteContact, fetchContacts } from '../../redux/phonebook/phonebook-operations';
 import { getFilteredContacts } from '../../redux/phonebook/phonebook-selectors';
 import style from './ContactList.module.css';
 
@@ -17,6 +18,10 @@ const ContactList = () => {
   // };
 
   // const filterContacts = filteredContacts(contacts, filter);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <ul className={style.contactsList}>

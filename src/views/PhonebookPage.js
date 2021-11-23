@@ -1,20 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import ContactForm from '../Components/ContactForm/ContactForm';
-import ContactList from '../Components/ContactList/ContactList';
+import { useSelector } from 'react-redux';
 import Container from '../Components/Container/Container';
+import ContactForm from '../Components/ContactForm/ContactForm';
 import Filter from '../Components/Filter/Filter';
+import ContactList from '../Components/ContactList/ContactList';
 
-// import { todosOperations, todosSelectors } from '../redux/todos';
-
-export default function PhonebookPage(params) {
-  const dispatch = useDispatch();
-  //   const isLoadingTodos = useSelector(todosSelectors.getLoading);
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const toggleModal = () => setIsModalOpen(state => !state);
-
-  //   useEffect(() => dispatch(todosOperations.fetchTodos()), [dispatch]);
+export default function PhonebookPage() {
   const { loading } = useSelector(state => state.phonebook);
 
   return (

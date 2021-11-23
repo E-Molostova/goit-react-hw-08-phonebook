@@ -17,7 +17,7 @@ const styles = {
 const HomePage = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      Please log in orsign up
+      Please log in or sign up
       <span role="img" aria-label="Иконка приветствия">
         💁‍♀️
       </span>

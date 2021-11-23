@@ -11,3 +11,20 @@
   font-weight: 700;
   margin-right: 12px;
 }
+.button {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font: inherit;
+  background-color: blueviolet;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: orange;
+}

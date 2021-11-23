@@ -9,8 +9,8 @@ const UserMenu = () => {
 
   return (
     <div className={s.container}>
-      <span className={s.name}>Добро пожаловать, {name}</span>
-      <button type="button" onClick={() => dispatch(authOperations.logOut())}>
+      <span className={s.name}>Welcome, {name}</span>
+      <button className={s.button} type="button" onClick={() => dispatch(authOperations.logOut())}>
         Log Out
       </button>
     </div>
