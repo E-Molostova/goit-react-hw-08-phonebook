@@ -1,6 +1,6 @@
 .inputFilter {
   width: 200px;
-  height: 50px;
+  height: 35px;
   border-radius: 10px;
   border-color: blueviolet;
   margin: 0 5px;
@@ -9,9 +9,8 @@
   border-color: orange;
 }
 .inputLabel {
-  
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
 }
 .divFilter {
   margin: 0 auto;

@@ -1,19 +1,14 @@
 .contactsList {
   list-style: none;
   padding: 0;
-  /* width: 500px; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-
-  /* margin-left: 400px; */
 }
 .contactsItem {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin-right: 20px;
   color: black;
